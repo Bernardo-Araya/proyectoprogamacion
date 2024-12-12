@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Registr<span class="app">App</span>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/home">
+        <ion-icon slot="icon-only" name="log-out" color="warning"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h1>Bienvenido <span class="app">Profesor</span></h1>
+  <br>
+
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header">
+        <ion-label>Asignaturas</ion-label>
+      </ion-item>
+      <!-- <div class="ion-padding" slot="content" *ngFor="let asignatura of asignaturas">
+        <a [routerLink]="['/detalle-asignatura/' + asignatura.id]">{{ asignatura.nombre }}</a>
+      </div> -->
+
+      <div class="ion-padding" slot="content" *ngFor="let asignatura of listado">
+        <a [routerLink]="['/detalle-asignatura/' + asignatura.id]">{{ asignatura.nombre }} </a>
+      </div>
+      
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header">
+        <ion-label>Código QR</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content"><a routerLink="/qr">Generar Código</a></div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  <ion-button expand="full" color="warning" routerLink="/cambio">
+    Cambiar Contraseña
+  </ion-button>
+
+</ion-content>

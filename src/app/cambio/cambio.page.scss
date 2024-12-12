@@ -1,0 +1,28 @@
+ion-content {
+    background-color: black;
+    color: yellow;
+  }
+  
+  ion-item {
+    --background: #222;
+  }
+  
+  ion-label {
+    color: yellow;
+  }
+  
+  ion-input {
+    color: yellow;
+    --placeholder-color: yellow;
+  }
+  
+  .error-message {
+    color: red;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .invalid {
+    border-color: red !important;
+  }
+  

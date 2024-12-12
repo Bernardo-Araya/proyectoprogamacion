@@ -1,20 +1,38 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Registr<span class="app">App</span>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <strong><h1>Inicio de Sesión</h1></strong>
+    
+    <ion-input class="homeInput"
+              type="email"
+              color="primary" 
+              label="Usuario" 
+              label-placement="floating" 
+              fill="outline" 
+              placeholder="Ingresar Usuario"
+              [(ngModel)]="userInput">
+    </ion-input>
+
+    <ion-input class="homeInput"
+              type="password"
+              color="primary" 
+              label="Contraseña" 
+              label-placement="floating" 
+              fill="outline" 
+              placeholder="Ingresar Contraseña"
+              [(ngModel)]="pswdInput">
+    </ion-input>
+
+    <ion-button (click)="inicioSesion()" class="boton" expand="block" shape="round">
+      Iniciar sesión
+    </ion-button>
+
   </div>
 </ion-content>

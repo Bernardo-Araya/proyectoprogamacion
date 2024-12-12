@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Registr<span class="app">App</span>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/estudiante">
+        <ion-icon slot="icon-only" name="arrow-back" color="warning"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ ramo?.nombre }}</ion-card-title>
+      <ion-card-subtitle>PORCENTAJE: <strong>{{ ramo?.asistencia }}</strong></ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      
+      <h2>Asistencia</h2>
+
+      <ion-grid>
+        <ion-row *ngFor="let asistencia of asistencias">
+          <ion-col *ngIf="asistencia.asignaturaId === ramo?.id">{{ asistencia.dia }}</ion-col>
+          <ion-col *ngIf="asistencia.asignaturaId === ramo?.id">{{ asistencia.fecha }}</ion-col>
+          <ion-col *ngIf="asistencia.asignaturaId === ramo?.id">{{ asistencia.estado }}</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
